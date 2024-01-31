@@ -1,8 +1,5 @@
 import flet as ft
+from pages.main import MainPage
 
 
-def main(page: ft.Page):
-    page.add(ft.SafeArea(ft.Text("Hello, Flet!")))
-
-
-ft.app(main)
+ft.app(MainPage)
