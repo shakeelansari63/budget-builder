@@ -1,4 +1,5 @@
 import 'package:budget_builder/models/expense.dart';
+import 'package:budget_builder/widgets/add_expense.dart';
 import 'package:budget_builder/widgets/expense_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -23,7 +24,10 @@ class Expenses extends ConsumerWidget {
                     ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context, builder: (ctx) => const AddExpense());
+                },
                 icon: const Icon(Icons.add),
               ),
             ],

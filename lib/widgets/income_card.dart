@@ -38,7 +38,10 @@ class IncomeCard extends ConsumerWidget {
                 ),
                 IconButton(
                   onPressed: () {
-                    budgetActions.removeIncome(income);
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (ctx) => const Text('Do you want to delete?'));
+                    // budgetActions.removeIncome(income);
                   },
                   icon: const Icon(Icons.delete),
                 ),

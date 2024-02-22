@@ -36,7 +36,7 @@ class ExpenseCard extends ConsumerWidget {
                     ),
               ),
               Text(
-                'Budget Amount: ${expense.amount}',
+                'Budget: ${expense.amount}',
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: Theme.of(context).colorScheme.onBackground,
                     ),
@@ -45,13 +45,13 @@ class ExpenseCard extends ConsumerWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    'Used Amount: ${_totalSpend()}',
+                    'Used: ${_totalSpend()}',
                     style: Theme.of(context).textTheme.labelSmall!.copyWith(
                           color: Theme.of(context).colorScheme.onBackground,
                         ),
                   ),
                   Text(
-                    'Remaining Amount: ${_spendRemaining()}',
+                    'Remaining: ${_spendRemaining()}',
                     style: Theme.of(context).textTheme.labelSmall!.copyWith(
                           color: Theme.of(context).colorScheme.onBackground,
                         ),

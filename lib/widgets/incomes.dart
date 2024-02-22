@@ -1,4 +1,5 @@
 import 'package:budget_builder/models/income.dart';
+import 'package:budget_builder/widgets/add_income.dart';
 import 'package:budget_builder/widgets/income_card.dart';
 import 'package:flutter/material.dart';
 
@@ -33,7 +34,10 @@ class Incomes extends StatelessWidget {
                     ),
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: () {
+                  showModalBottomSheet(
+                      context: context, builder: (ctx) => const AddIncome());
+                },
                 icon: const Icon(
                   Icons.add,
                   size: 20,
