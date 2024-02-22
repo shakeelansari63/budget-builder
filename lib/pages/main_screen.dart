@@ -1,6 +1,6 @@
 import 'package:budget_builder/providers/theme_provider.dart';
-import 'package:budget_builder/widgets/current_budget.dart';
-import 'package:budget_builder/widgets/history_budgets.dart';
+import 'package:budget_builder/pages/current_budget.dart';
+import 'package:budget_builder/pages/history_budgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -41,7 +41,10 @@ class _MainScreenState extends ConsumerState<MainScreen> {
           ),
         ],
       ),
-      body: currentPage,
+      body: Container(
+        padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 10),
+        child: currentPage,
+      ),
       bottomNavigationBar: BottomNavigationBar(
         items: const [
           BottomNavigationBarItem(

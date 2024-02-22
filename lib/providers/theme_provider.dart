@@ -13,8 +13,8 @@ ThemeData themeBuilder(Brightness brightness) {
   );
 }
 
-class ThemeState extends StateNotifier<ThemeData> {
-  ThemeState() : super(themeBuilder(Brightness.light));
+class ThemeStateNotifier extends StateNotifier<ThemeData> {
+  ThemeStateNotifier() : super(themeBuilder(Brightness.light));
 
   void toggleTheme() {
     final currentTheme = state.colorScheme.brightness;
@@ -27,5 +27,5 @@ class ThemeState extends StateNotifier<ThemeData> {
   }
 }
 
-final appTheme =
-    StateNotifierProvider<ThemeState, ThemeData>((ref) => ThemeState());
+final appTheme = StateNotifierProvider<ThemeStateNotifier, ThemeData>(
+    (ref) => ThemeStateNotifier());

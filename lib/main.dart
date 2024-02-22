@@ -1,5 +1,5 @@
 import 'package:budget_builder/providers/theme_provider.dart';
-import 'package:budget_builder/screens/main_screen.dart';
+import 'package:budget_builder/pages/main_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
